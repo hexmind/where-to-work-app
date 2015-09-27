@@ -1,7 +1,7 @@
 # Where to work?
  This is demo web application for contractor's income calculations.
 
- This Spring Boot + AngularJS project and was created with JHipster (Yeoman).
+ This Spring Boot + AngularJS project was created with JHipster (Yeoman).
 
 ![Spring Boot](http://jhipster.github.io/images/logo-spring-boot.png)
 ![AngularJS](http://jhipster.github.io/images/logo-angularjs.png)
