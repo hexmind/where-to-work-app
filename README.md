@@ -15,9 +15,7 @@
 * Enter daily rate 
 * Read monthly net income (without tax income and fixed cost)
 
-![screenshot] (doc/screenshot.png =200x)
-
-[screenshot] (doc/screenshot.png)
+![screenshot](doc/screenshot.png)
 
 ## How to run
 
