@@ -1,0 +1,63 @@
+country:
+  name:
+    UK: Great Britain
+    DE: Germany
+    PL: Poland
+  currency:
+    UK: GBP
+    DE: EUR
+    PL: PLN
+  fixed:
+    UK: 600
+    DE: 800
+    PL: 1200
+  tax:
+    UK: 0.25
+    DE: 0.20
+    PL: 0.19
+
+app:
+    default:
+        country: PL
+    constants:
+        workdaysInMonth: 22
+
+# Disable the spring security default configuration from spring-boot-actuator
+management.security.enabled: true
+security.basic.enabled: false
+
+# Disable Jolokia - An http/json bridge for remote JMX access
+endpoints.jolokia.enabled: false
+
+# security configuration (this key should be unique for your application, and kept secret)
+jhipster.security.rememberme.key: 1c749dd92ccac3cd4d7215550bf29bbf0991f51d
+
+async:
+    corePoolSize: 2
+    maxPoolSize: 50
+    queueCapacity: 10000
+
+mail:
+    host: localhost
+    port: 25
+    username:
+    password:
+    protocol: smtp
+    tls: false
+    auth: false
+    from: whereToWorkApp@localhost
+
+
+spring:
+    mvc:
+        favicon:
+            enabled: false
+
+swagger:
+    title: whereToWorkApp API
+    description: whereToWorkApp applications and beyond!
+    version: 0.0.1
+    termsOfServiceUrl: http://jhipster.github.io/
+    contact:
+    license: Apache 2.0
+    licenseUrl: http://www.apache.org/licenses/LICENSE-2.0.html

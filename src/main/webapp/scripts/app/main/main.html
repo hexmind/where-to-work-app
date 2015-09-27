@@ -1,0 +1,36 @@
+<div ng-cloak>
+    <div class="row">
+
+        <div>
+            <h1>Where to work?</h1>
+            <p class="lead">Contractor's income calculator</p>
+        </div>
+
+        <div ng-controller="MainController as ctr" class="col-md-12">
+            <div class="well">
+
+                <div>
+                    <h2>1. Choose country</h2>
+                    <p ng-repeat="c in ctr.countries">
+                        <input type="radio" id="{{c.code}}" ng-model="ctr.country" ng-value="c"
+                               ng-change="ctr.calculate()">
+                        <label for="{{c.code}}">{{c.name}}</label>
+                    </p>
+                </div>
+
+                <div ng-show="ctr.country">
+                    <h2>2. Enter daily rate</h2>
+                    <input type="number" step="0.01" placeholder="net amount" ng-model="ctr.dailyRate" ng-change="ctr.calculate()"/>
+                    <span ng-bind="ctr.country.currency"/>
+                </div>
+            </div>
+
+            <div class="well col-md-12 text-center" ng-show="ctr.income">
+                <h2>Result</h2>
+                <p class="col-md-12" income-part title="Monthly net income" money="ctr.income.netValue"></p>
+                <p class="col-md-6" income-part title="Income tax ({{ctr.income.incomeTax*100}}%)" money="ctr.income.taxValue"></p>
+                <p class="col-md-6" income-part title="Fixed cost" money="ctr.income.fixedCost"></p>
+            </div>
+        </div>
+    </div>
+</div>
